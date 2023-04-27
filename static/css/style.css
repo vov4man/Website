@@ -1,0 +1,213 @@
+body {
+    margin: 0;
+}
+
+.logo {
+    position: absolute;
+    margin-left: 18px;
+    margin-top: 8px;
+
+}
+
+.name {
+    position: absolute;
+    margin-left: 435px;
+    margin-top: 6px;
+}
+
+.header {
+    background-image: url(fon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 2030px;
+}
+
+.login {
+     position: absolute;
+     background-image: url(button.png);
+     margin-left: 1325px;
+     background-size: cover;
+     background-repeat: no-repeat;
+     padding: 28px 84px;
+     color: #000000;
+     text-decoration: none;
+     font-weight: 700;
+     font-size: 22px;
+
+     transition: color 0.3s linear;
+}
+
+.login:hover {
+     color: #600;
+}
+
+.register {
+     position: absolute;
+     background-image: url(button.png);
+     margin-left: 1325px;
+     margin-top: 90px;
+     background-size: cover;
+     background-repeat: no-repeat;
+     padding: 28px 60px;
+     color: #000000;
+     text-decoration: none;
+     font-weight: 700;
+     font-size: 22px;
+
+     transition: color 0.3s linear;
+}
+
+.register:hover {
+     color: #600;
+}
+
+
+.footer {
+    background-color: #000;
+    padding: 50px 0px;
+    color: #fff;
+    text-align: center;
+    font-weight: 500;
+    font-size: 32px;
+}
+
+.back {
+     position: absolute;
+     background-image: url(button.png);
+     margin-left: 1325px;
+     margin-top: 40px;
+     background-size: cover;
+     background-repeat: no-repeat;
+     padding: 19px 110px;
+     color: #000000;
+     text-decoration: none;
+     font-weight: 700;
+     font-size: 24px;
+
+     transition: color 0.3s linear;
+}
+
+.back:hover {
+     color: #600;
+}
+
+.logout {
+     position: absolute;
+     background-image: url(button.png);
+     margin-left: 1325px;
+
+     background-size: cover;
+     background-repeat: no-repeat;
+     padding: 19px 107px;
+     color: #000000;
+     text-decoration: none;
+     font-weight: 700;
+     font-size: 24px;
+     transition: color 0.3s linear;
+}
+
+.logout:hover {
+    color: #600;
+}
+
+.cart {
+     position: absolute;
+     background-image: url(button.png);
+     margin-left: 1325px;
+     margin-top: 80px;
+     background-size: cover;
+     background-repeat: no-repeat;
+     padding: 19px 95px;
+     color: #000000;
+     font-weight: 700;
+     font-size: 24px;
+
+     transition: color 0.3s linear;
+}
+
+.cart:hover {
+     color: #600;
+}
+
+.market {
+     position: absolute;
+     background-image: url(button.png);
+     margin-left: 1325px;
+     margin-top: 160px;
+     background-size: cover;
+     background-repeat: no-repeat;
+     padding: 23px 68px;
+     color: #000000;
+     font-weight: 700;
+     font-size: 18px;
+     transition: color 0.3s linear;
+}
+
+.market:hover {
+    color: #600;
+}
+
+.message{
+    position: absolute;
+    margin-left: 750px;
+    margin-top: 600px;
+}
+
+.user_name {
+     position: absolute;
+     margin-left: 1625px;
+     font-weight: 700;
+     font-size: 28px;
+     color: #000000;
+}
+.showcase{
+    margin-left: 400px;
+}
+
+.buy {
+     position: absolute;
+     background-image: url(button.png);
+     margin-left: 1325px;
+     margin-top: 115px;
+     background-size: cover;
+     background-repeat: no-repeat;
+     padding: 19px 105px;
+     color: #000000;
+     text-decoration: none;
+     font-weight: 700;
+     font-size: 24px;
+
+     transition: color 0.3s linear;
+}
+
+.buy:hover{
+    color: #600;
+}
+
+
+.add_money{
+    position: absolute;
+     background-image: url(button.png);
+     margin-left: 1325px;
+     margin-top: 160px;
+     background-size: cover;
+     background-repeat: no-repeat;
+     padding: 23px 74px;
+     color: #000000;
+     font-weight: 700;
+     font-size: 18px;
+     transition: color 0.3s linear;
+}
+
+.add_money:hover{
+    color: #600;
+}
+
+.balance{
+     position: absolute;
+     margin-left: 1625px;
+     margin-top: 90px;
+     font-weight: 700;
+     font-size: 28px;
+     color: #000000;
+}

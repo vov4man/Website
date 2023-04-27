@@ -1,0 +1,56 @@
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sword and Shield</title>
+</head>
+
+<div class="header">
+    <div class="header-line">
+        <div class="logo">
+            <img src="{{url_for('static', filename='img/lg.jpg') }}" width="187" height="187">
+        </div>
+        <div class="name">
+            <img src="{{url_for('static', filename='img/name.png') }}" width="880" height="162">
+        </div>
+        <div class="btn">
+            <a class="user_name">Пользователь: {{ current_user.name }}</a>
+            <a class="back" href="/"> Назад </a>
+            <a class="buy" href="/buy"> Купить </a>
+            <a class="balance">Текущий баланс: {{ balance }}</a>
+        </div>
+        <link rel="stylesheet"
+              href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+              integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+              crossorigin="anonymous">
+        <h2 style="margin-left: 40%; margin-top:13%; position: absolute;">Цена всех товаров в корзине - {{cheque}}</h2>
+        <div style="margin-top:300px; position:absolute;">
+            {% for item in _cart%}
+            <div class="col-8 border rounded" style="margin-left: 320px; margin-top: 10px">
+                <h2>{{item.product_name}}</h2>
+                <div>
+                    <h4>{{item.description}}</h4>
+                </div>
+                <div style="margin-top: 40px;">
+                    <h4>Цена - {{item.price}}, Количество - {{item.value}}</h4>
+                    <a href="/change_value/{{ item.id }}" class="btn btn-warning" style="margin-top: 10px;
+                                margin-bottom: 10px;">
+                        Изменить Количество
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+            <div style="margin-left: 50%;">
+                <h2>{{message}}</h2>
+            </div>
+        </div>
+        </form>
+    </div>
+</div>
+
+<div class="footer">
+    SnS Project 2023
+</div>

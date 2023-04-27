@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sword and Shield</title>
+</head>
+<body>
+
+
+
+<div class="header">
+    <div class="header-line">
+        <div class="logo">
+            <img src="{{url_for('static', filename='img/lg.jpg') }}" width="187" height="187">
+        </div>
+
+        <div class="name">
+            <img src="{{url_for('static', filename='img/name.png') }}" width="880" height="162">
+        </div>
+
+        <div class="btn">
+            <a class="back" href="/"> Назад </a>
+        </div>
+
+        <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous">
+
+        <form action="" method="post">
+            {{ form.hidden_tag() }}
+            <p>
+                <div class="col-sm-5">
+                    {{ form.email(class="form-control", type="email", placeholder="Почта",
+                    style="margin-top: 270px; margin-left: 600px; position: absolute;") }}<br> </div>
+                {% for error in form.email.errors %}
+                <p class="alert alert-danger" role="alert">
+                    {{ error }}
+                </p>
+            {% endfor %}
+            </p>
+
+            <p>
+                <div class="col-sm-5">
+                        {{ form.password(class="form-control", type="password", placeholder="Пароль",
+                        style="margin-top: 300px; margin-left: 600px; position: absolute;") }}<br> </div>
+                    {% for error in form.password.errors %}
+                        <p class="alert alert-danger" role="alert">
+                            {{ error }}
+                        </p>
+                {% endfor %}
+            </p>
+
+            <p>
+                <div class="col-sm-5">
+                    {{ form.password_again(class="form-control", type="password", placeholder="Повторите пароль",
+                        style="margin-top: 330px; margin-left: 600px; position: absolute;") }}<br> </div>
+                {% for error in form.password_again.errors %}
+                    <p class="alert alert-danger" role="alert">
+                        {{ error }}
+                    </p>
+            {% endfor %}
+            </p>
+
+            <p>
+                <div class="col-sm-5">
+                    {{ form.name(class="form-control", placeholder="Имя пользователя",
+                        style="margin-top: 360px; margin-left: 600px; position: absolute;") }}<br> </div>
+                {% for error in form.name.errors %}
+                    <p class="alert alert-danger" role="alert">
+                        {{ error }}
+                    </p>
+            {% endfor %}
+            </p>
+
+            <p>
+                <div class="col-sm-5">
+                {{ form.admin_key(class="form-control", placeholder="Ключ администрации",
+                        style="margin-top: 390px; margin-left: 600px; position: absolute;") }}<br> </div>
+                {% for error in form.admin_key.errors %}
+                    <p class="alert alert-danger" role="alert">
+                        {{ error }}
+                    </p>
+            {% endfor %}
+            </p>
+
+            <p>{{ form.submit(type="submit", class="btn btn-primary", style="margin-top: 470px;
+                margin-left: 900px; position: absolute; font-size: 2rem; padding: 10px 40px;") }}</p>
+            <div class="message">
+                <h2>{{message}}</h2>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="footer">
+    SnS Project 2023
+</div>
+
