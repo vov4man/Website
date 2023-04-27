@@ -167,6 +167,8 @@ def change_value(id):
         db_sess = db_session.create_session()
         cart = db_sess.query(Cart).filter(Cart.id == id, Cart.user_id == current_user.id).first()
         if cart:
+            if form.value.data < 0:
+                form.value.data = 0
             cart.value = form.value.data
             db_sess.commit()
             return redirect('/cart')
@@ -189,6 +191,8 @@ def add_money():
             abort(404)
     if form.validate_on_submit():
         if wallet:
+            if (form.value.data) < 0:
+                    form.value.data = 0
             wallet.balance += int(form.value.data)
             db_sess.commit()
             return redirect('/')
@@ -225,7 +229,7 @@ def buy():
                         return render_template('/cart.html',
                                                message=f'Количество товара: "{j.product_name}" в корзине превышает,'
                                                        f'количество товара: "{j.product_name}"  на складе.',
-                                               balance=balance)
+                                               balance=balance, cheque=0)
         print(full_price)
         if full_price > balance:
             return render_template('/cart.html',
